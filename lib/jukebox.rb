@@ -23,7 +23,7 @@ def list(songs)
   songs.each_with_index { |song, index| puts "#{index + 1}. #{song}" }
 end
 
-
+=begin
 def play(songs)
   puts "Please enter a song name or number:"
   user_response = gets.chomp
@@ -35,7 +35,15 @@ def play(songs)
     end
   end
 end
+=end
 
+def play(songs)
+  puts "Please enter a song name or number:"
+  user_response = gets.chomp
+  if songs[user_response.to_i -1]
+    puts "Playing #{songs[user_response.to_i -1]}"
+    else 
+end
 
 
 
