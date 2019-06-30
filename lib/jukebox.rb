@@ -43,7 +43,8 @@ def play(songs)
   if songs[user_response.to_i-1]
     puts "Playing #{songs[user_response.to_i-1]}"
   elsif songs.include?(user_response)
-    puts "Playing #{songs.detect(user_response)}"
+    songs.detect { |song| song == user_response }
+    puts "Playing #{song}"
   else 
     puts "Invalid input, please try again"
   end
