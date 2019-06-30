@@ -42,7 +42,8 @@ def play(songs)
   user_response = gets.chomp
   if songs[user_response.to_i -1]
     puts "Playing #{songs[user_response.to_i -1]}"
-    else 
+  else 
+    puts "Invalid input, please try again"
   end
 end
 
