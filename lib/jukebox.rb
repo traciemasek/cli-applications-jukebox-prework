@@ -44,8 +44,9 @@ def play(songs)
     puts "Playing #{songs[user_response.to_i-1]}"
   elsif songs.include?(user_response)
     songs.detect do |song| 
-    song == user_response 
-    puts "Playing #{song}"
+      if song == user_response 
+      puts "Playing #{song}"
+      end
     end
   else 
     puts "Invalid input, please try again"
