@@ -41,7 +41,7 @@ def play(songs)
   puts "Please enter a song name or number:"
   user_response = gets.strip
   #if songs[user_response.to_i-1]
-  if user_response.to_i >= 1 && user_response.to_i < songs.length
+  if user_response.to_i >= 1 && user_response.to_i <= songs.length
     puts "Playing #{songs[user_response.to_i-1]}"
   elsif songs.include?(user_response)
     #puts "Playing #{songs.find{|song| song == user_response}}"
